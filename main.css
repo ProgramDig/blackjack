@@ -1,17 +1,24 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
+	background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	
 }
 .container h2 {
+	margin-top: 1em;
 	color: cadetblue;
 	font-size: 2rem;
-	margin: 1.5em 1.3em;
+	padding-top: 3%;
 	color: #FFFFFF;	
 	color: #FFFFFF;
 	background: initial;
 }
 #dealer-cards img,
 #your-cards img {
+	margin: 2em 3em;
 	height: 175px;
 	width: 125px;
 	margin: 3px;
@@ -22,18 +29,10 @@ body {
 	width: 100px;
 	height: 50px;
 	font-size: 20px;
-}
-.container {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 0;
-	background-image: url("./img/background/dark-blue-green-gradient.jpg");
-}
+} 
 #results {
 	margin-top: 10px;
-	color: #fff;
+	color: red;
 	font-weight: 900;
 	font-size: 60px;
 }
