@@ -7,7 +7,9 @@ let yourAceCount = 0;
 let hidden;
 let deck;
 
-var canHit = true;
+let canHit = true;
+
+
 
 window.onload = function() {
 	buildDeck();
@@ -64,7 +66,29 @@ function startGame() {
 	}
 	console.log(yourSum)
 	document.getElementById('hit').addEventListener('click', hit);
-	document.getElementById('stay').addEventListener('click', stay)
+	document.getElementById('stay').addEventListener('click', stay);
+	document.getElementById('reset').addEventListener('click', resetGame);
+
+}
+
+function resetGame (){
+	dealerSum = 0;
+	yourSum = 0;
+	dealerAceCount = 0;
+	yourAceCount = 0;
+	canHit = true;
+	hidden = null;
+   deck = null;
+
+	document.getElementById("your-cards").innerHTML = '';
+	document.getElementById("dealer-cards").innerHTML = '<img id="hidden" src="./cards/BACK.png" alt="img">';
+	document.getElementById('dealer-sum').innerText = '';
+	document.getElementById('your-sum').innerText = '';
+	document.getElementById('results').innerText = '';
+
+	buildDeck();
+	shuffleDeck();
+	startGame();
 }
 
 function hit (){
