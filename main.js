@@ -7,11 +7,14 @@ let yourAceCount = 0;
 let hidden;
 let deck;
 
+let name = '';
 let canHit = true;
 
-
-
 window.onload = function() {
+	name = prompt('Input your name', '');
+	
+
+
 	buildDeck();
 	shuffleDeck();
 	startGame();
