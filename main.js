@@ -8,11 +8,15 @@ let deck;
 let userName = '';
 let canHit = true;
 window.onload = function() {
-	// userName = prompt('Input your name', '');
-	// document.querySelector('h2').innerText = userName;
+	userName = prompt('Input your name', '');
+ 	document.querySelector('.user-name').innerText = userName;
+	let span = document.createElement('span');
+	span.id = 'your-sum';
+	document.querySelector('.user-name').append(span);
+
 	buildDeck();
 	shuffleDeck();
-	startGame();
+	startGame();	
 }
 function buildDeck() {
 	let values = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
@@ -109,8 +113,8 @@ function stay() {
 	else if (yourSum < dealerSum) {
 		message = 'You lose!';
 	}
-	document.getElementById('dealer-sum').innerText = dealerSum;
-	document.getElementById('your-sum').innerText = yourSum;
+	document.getElementById('dealer-sum').innerText = ': ' + dealerSum;
+	document.getElementById('your-sum').innerText = ': ' + yourSum;
 	document.getElementById('results').innerText = message;
 }
 function getValue(card) {
