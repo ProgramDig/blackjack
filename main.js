@@ -1,6 +1,5 @@
 let dealerSum = 0;
 let yourSum = 0;
-
 let dealerAceCount = 0;
 let yourAceCount = 0;
 let hidden;
@@ -13,7 +12,6 @@ window.onload = function() {
 	let span = document.createElement('span');
 	span.id = 'your-sum';
 	document.querySelector('.user-name').append(span);
-
 	buildDeck();
 	shuffleDeck();
 	startGame();	

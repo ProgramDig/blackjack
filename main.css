@@ -6,10 +6,7 @@ body {
 	color: cadetblue;
 	font-size: 2rem;
 	margin: 1.5em 1.3em;
-	color: #FFFFFF;
-	background: #333333;
-	text-shadow: #FFF 0 0 5px, #FFF 0 0 10px, #FFF 0 0 15px,
-	#FF2D95 0 0 20px, #FF2D95 0 0 30px, #FF2D95 0 0 40px, #FF2D95 0 0 50px, #FF2D95 0 0 75px;
+	color: #FFFFFF;	
 	color: #FFFFFF;
 	background: initial;
 }
@@ -33,4 +30,10 @@ body {
 	right: 0;
 	top: 0;
 	background-image: url("./img/background/dark-blue-green-gradient.jpg");
+}
+#results {
+	margin-top: 10px;
+	color: orangered;
+	font-weight: 900;
+	font-size: 60px;
 }
