@@ -1,15 +1,12 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
+
 }
 .container h2 {
 	color: cadetblue;
 	font-size: 2rem;
 	margin: 1.5em 1.3em;
-	color: #FFFFFF;
-	background: #333333;
-	text-shadow: #FFF 0 0 5px, #FFF 0 0 10px, #FFF 0 0 15px,
-	#FF2D95 0 0 20px, #FF2D95 0 0 30px, #FF2D95 0 0 40px, #FF2D95 0 0 50px, #FF2D95 0 0 75px;
 	color: #FFFFFF;
 	background: initial;
 }
@@ -26,6 +23,11 @@ body {
 	height: 50px;
 	font-size: 20px;
 }
+.image-bg {
+	overflow: auto;
+	min-height: 100px;
+	background-size: contain;
+}
 .container {
 	position: absolute;
 	bottom: 0;
@@ -33,4 +35,13 @@ body {
 	right: 0;
 	top: 0;
 	background-image: url("./img/background/dark-blue-green-gradient.jpg");
+}
+#results {
+	text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+	color: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3.5em;
+	margin-top: 5px;
 }
