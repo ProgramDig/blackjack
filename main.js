@@ -65,6 +65,22 @@ function startGame() {
 	console.log(yourSum)
 }
 
+function hit (){
+	if (!canHit) {
+		return;
+	}
+	let cardImg = document.createElement('img');
+	let card = deck.pop();
+	cardImg.src = './cards/' + card + '.png';
+	yourSum += getValue(card);
+	yourAceCount += checkAce(card);
+	document.getElementById('your-cards').append(cardImg);		
+
+	if(reduseAce(yourSum, yourAceCount) > 21) {
+		canHit = false;
+	}
+}
+
 function getValue(card) {
 	let data = card.split('-');
 	let value = data[0];
@@ -84,3 +100,11 @@ function checkAce(card) {
 	}
 	return 0;
 } 
+
+function reduseAce(player, playerAceCount) {
+	while (playerSum > 21 && playerAceCount > 0) {
+		playerSum -= 10;
+		playerAceCount -= 1;
+	}
+	return playerSum;
+}
