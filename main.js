@@ -16,12 +16,8 @@ window.onload = function () {
 }
 
 function promptUserName() {
-    do {
-        userName = prompt('Input your name', '');
-        if (userName == '' || userName == null) {
-            alert('Name is not define')
-        }
-    } while (userName == null || userName == '');
+    userName = document.getElementById('userNameValue').value;
+    console.log(userName);
 }
 
 function addUserNameElement() {
