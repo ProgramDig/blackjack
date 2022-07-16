@@ -4,25 +4,34 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Black Jack </title>
-        <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="main.css">
+		  <link rel="shortcut icon" href="/img/ico/Icons-Land-Metro-Raster-Sport-Casino-Playing-Cards.ico" type="image/png">
         <script src="main.js"></script>
     </head>
-
     <body>
         <div class="container">
+
             <img class="image-bg">
-            <h2>Dealer: <span id="dealer-sum"></span></h2>
+
+            <h2>Dealer<span id="dealer-sum"></span></h2>
+
             <div id="dealer-cards">
-                <img id="hidden" src="./cards/BACK.png" alt="img">
+                <img id="hidden" src="./img/cards/BACK.png" alt="img">
             </div>
-            <div id="results" ></div>
+            <div>
+                <p id="results"></p>
+            </div>
+
             <h2 class="user-name"> <span id="your-sum"></span></h2>
             <div id="your-cards"></div>
             <br>
-            <button id="hit">Hit</button>
-            <button id="stay">Stay</button>
-            <button id="reset">Reset</button>
+                <button class="buttons" id="hit">Hit</button>
+                <button class="buttons" id="stay">Stay</button>
+                <button class="buttons" id="reset">Reset</button>
         </div>
     </body>
 </html>
+            </div>
+        </body>
+        </html>
