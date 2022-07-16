@@ -51,25 +51,25 @@ body {
 }
 
 .buttons {
-    box-shadow: 3px 4px 0 0 #899599;
-    background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
-    background-color: #ededed;
-    border-radius: 15px;
-    border: 1px solid #d6bcd6;
-    display: inline-block;
+    outline: 0;
+    border: 3px solid #FFFFFF;
+    background: none;
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
     cursor: pointer;
-    color: #3a8a9e;
-    font-size: 17px;
-    padding: 7px 25px;
-    text-decoration: none;
-    margin-top: 30px;
-    margin-left: 15px;
-    text-shadow: 0 1px 0 #e1e2ed;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    color: white;
+    font-weight: bold;
 }
 
 .buttons:hover {
-    background: linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
-    background-color: #bab1ba;
+    background-color: white;
+    color: black;
+    opacity: 0.85;
+    font-size: 1.3em;
+    display: inline-block;
 }
 
 .buttons:active {
@@ -111,15 +111,15 @@ body {
     height: 12em;
 }
 
-.button-login{
+.button-login {
     outline: 0;
-    border:3px solid #FFFFFF;
-    background:none;
-    margin:25px;
+    border: 3px solid #FFFFFF;
+    background: none;
+    margin: 25px;
     padding: 10px 35px;
     font-family: 'Montserrat', sans-serif;
-    font-size:15px;
-    cursor:pointer;
+    font-size: 15px;
+    cursor: pointer;
     border-radius: 10px;
     transition: all 0.3s ease;
     color: white;
@@ -129,8 +129,6 @@ body {
 .link-btn {
     text-decoration: none;
     color: #FFFFFF;
-}
-.link-btn:hover {
 }
 
 .button-login:hover {

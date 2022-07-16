@@ -5,20 +5,11 @@ let dealerAceCount = 0;
 let yourAceCount = 0;
 let hidden;
 let deck;
-let userName;
 let canHit = true;
-window.onload = function () {
-    promptUserName();
-    addUserNameElement();
-    buildDeck();
-    shuffleDeck();
-    startGame();
-}
 
-function promptUserName() {
-    userName = document.getElementById('userNameValue').value;
-    console.log(userName);
-}
+
+//userName = document.getElementById('username').value; -> trouble
+userName = "test"
 
 function addUserNameElement() {
     document.querySelector('.user-name').innerText = userName;
@@ -153,4 +144,11 @@ function reduseAce(playerSum, playerAceCount) {
         playerAceCount -= 1;
     }
     return playerSum;
+}
+
+window.onload = function () {
+    addUserNameElement();
+    buildDeck();
+    shuffleDeck();
+    startGame();
 }
