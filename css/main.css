@@ -24,7 +24,6 @@ body {
     width: 125px;
     margin: 3px;
 }
-
 #hit,
 #stay,
 #reset {
@@ -77,4 +76,27 @@ body {
     position: relative;
     top: 1px;
 }
+
+.container-login h2{
+    overflow: initial;
+    font-size: 5rem;
+    padding: 2em 2em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.label-name {
+    display: flex;
+    font-size: 3em;
+    justify-content: center;
+    align-items: center;
+}
+.input {
+    background: transparent;
+    border: solid;
+    border-radius: 10px;
+    height: 40px;
+    font-size: 1.5em;
+}
+
 
