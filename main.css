@@ -1,71 +1,80 @@
 body {
-	font-family: Arial, Helvetica, sans-serif;
-	text-align: center;
-	background: #0F2027;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+,
-    Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: #0F2027; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* W3C, IE 10+/ Edge, Firefox 16+,
+       Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 .container h2 {
-	color: cadetblue;
-	font-size: 2rem;
-	margin: 1em 1.3em;
-	color: #FFFFFF;
-	color: #FFFFFF;
-	background: initial;
+    color: cadetblue;
+    font-size: 2rem;
+    margin: 1em 1.3em;
+    color: #FFFFFF;
+    color: #FFFFFF;
+    background: initial;
 }
+
 #dealer-cards img,
 #your-cards img {
-	margin: 2em 3em;
-	height: 175px;
-	width: 125px;
-	margin: 3px;
+    margin: 2em 3em;
+    height: 175px;
+    width: 125px;
+    margin: 3px;
 }
+
 #hit,
 #stay,
 #reset {
-	width: 100px;
-	height: 50px;
-	font-size: 20px;
-} 
-#results {
-	margin-top: 10px;
-	color: red;
-	font-weight: 900;
-	font-size: 60px;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
 }
+
 #results {
-	text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
-	color: red;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 3.5em;
-	margin-top: 5px;
+    margin-top: 10px;
+    color: red;
+    font-weight: 900;
+    font-size: 60px;
 }
+
+#results {
+    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5em;
+    margin-top: 5px;
+}
+
 .buttons {
-	box-shadow: 3px 4px 0 0 #899599;
-	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
-	background-color:#ededed;
-	border-radius:15px;
-	border:1px solid #d6bcd6;
-	display:inline-block;
-	cursor:pointer;
-	color:#3a8a9e;
-	font-family:Arial;
-	font-size:17px;
-	padding:7px 25px;
-	text-decoration:none;
-	margin-top: 30px;
-	margin-left: 15px;
-	text-shadow:0 1px 0 #e1e2ed;
+    box-shadow: 3px 4px 0 0 #899599;
+    background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+    background-color: #ededed;
+    border-radius: 15px;
+    border: 1px solid #d6bcd6;
+    display: inline-block;
+    cursor: pointer;
+    color: #3a8a9e;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 7px 25px;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-left: 15px;
+    text-shadow: 0 1px 0 #e1e2ed;
 }
+
 .buttons:hover {
-	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
-	background-color:#bab1ba;
+    background: linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+    background-color: #bab1ba;
 }
+
 .buttons:active {
-	position:relative;
-	top:1px;
+    position: relative;
+    top: 1px;
 }
 
