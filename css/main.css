@@ -24,6 +24,7 @@ body {
     width: 125px;
     margin: 3px;
 }
+
 #hit,
 #stay,
 #reset {
@@ -58,7 +59,6 @@ body {
     display: inline-block;
     cursor: pointer;
     color: #3a8a9e;
-    font-family: Arial;
     font-size: 17px;
     padding: 7px 25px;
     text-decoration: none;
@@ -76,27 +76,35 @@ body {
     position: relative;
     top: 1px;
 }
-
-.container-login h2{
-    overflow: initial;
-    font-size: 5rem;
-    padding: 2em 2em;
+.container-login h2 {
+    color: #FFFFFF;
     overflow: hidden;
+    font-size: 5em;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 1.3em;
 }
+
 .label-name {
+    color: #FFFFFF;
+    margin-top: 1em;
     display: flex;
     font-size: 3em;
     justify-content: center;
     align-items: center;
 }
+
 .input {
+    color: #FFFFFF;
     background: transparent;
     border: solid;
     border-radius: 10px;
     height: 40px;
     font-size: 1.5em;
+}
+.image-start-pg {
+    height: 12em;
 }
 
 
