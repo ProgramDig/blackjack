@@ -8,9 +8,19 @@ let deck;
 let canHit = true;
 let userName = '';
 
+window.onload = function () {
+	document.querySelector('.container').style.visibility = 'hidden';
+	document.querySelector('.container').style.position = 'fixed';
+}
+
 document.querySelector('.button-login').onclick = function() {
 	userName = document.querySelector('#username').value
 	load();
+	document.querySelector('#modal').style.visibility = 'hidden';
+	document.querySelector('#modal').style.position = 'fixed';
+	document.querySelector('.container').style.visibility = 'visible';
+	document.querySelector('.container').style.position = 'static';
+
 }
 
 function addUserNameElement() {
