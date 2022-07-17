@@ -27,6 +27,8 @@ function clickEvent(){
 		alert('Name is not correct!')
 		document.querySelector('#username').value = ''
 		document.querySelector('#username').classList.add('n-correct');
+        document.querySelector('.incorrect_input').innerText = 'incorrect input';
+
 	} else {
 		userName = document.querySelector('#username').value
 		load();
