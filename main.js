@@ -14,13 +14,16 @@ window.onload = function () {
 }
 
 document.addEventListener('keydown' , (e) => {
-	if(e.code == 'Enter'){
-		clickEvent()
+	if(document.querySelector('#modal').style.visibility != 'hidden'){
+		if(e.code == 'Enter'){
+			clickEvent()
+		}
 	}
+
 })
 
 function clickEvent(){
-	if(document.querySelector('#username').value == '' || document.querySelector('#username').value.length < 4) {
+	if(document.querySelector('#username').value == '' || document.querySelector('#username').value.length < 3) {
 		alert('Name not correct!')
 		document.querySelector('#username').value = ''
 	} else {
