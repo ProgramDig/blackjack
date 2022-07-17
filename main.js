@@ -24,8 +24,9 @@ document.addEventListener('keydown' , (e) => {
 
 function clickEvent(){
 	if(document.querySelector('#username').value == '' || document.querySelector('#username').value.length < 3) {
-		alert('Name not correct!')
+		alert('Name is not correct!')
 		document.querySelector('#username').value = ''
+		document.querySelector('#username').classList.add('n-correct');
 	} else {
 		userName = document.querySelector('#username').value
 		load();
