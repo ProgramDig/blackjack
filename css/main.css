@@ -33,8 +33,9 @@ body {
     font-size: 20px;
 }
 #results {
+    display: flex;
     position: absolute;
-    top: 27%;
+    top: 27vh;
     background: linear-gradient(0.25turn, white, black, white);
     color: red;
     font-weight: 900;
