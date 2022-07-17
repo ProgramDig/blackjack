@@ -9,7 +9,21 @@
     <link rel="shortcut icon" href="./img/ico/Icons-Land-Metro-Raster-Sport-Casino-Playing-Cards.ico" type="image/png">
 </head>
 <body>
-<div class="container">
+	<div class="modal">
+		<div class="container-login">
+			<h2>Welcome to Black Jack card game</h2>
+			<img class="image-start-pg" src="/img/ico/png.png" alt="game-pic">
+			<label class="label-name">What is your name ?</label>
+			<input id="username" class="input" maxlength="10" name="username" type="text" placeholder=" Write name here">
+			<div>
+				 <a href="#">
+					  <button class="button-login">Enter</button>
+				 </a>
+			</div>
+	  </div>
+	</div>
+
+<div class="container">	
     <img class="image-bg">
     <h2>Dealer<span id="dealer-sum"></span></h2>
     <div id="dealer-cards">
@@ -26,7 +40,6 @@
     <button class="buttons" id="stay">Stay</button>
     <button class="buttons" id="reset">Reset</button>
 </div>
-
 <script src="../main.js"></script>
 </body>
 </html>

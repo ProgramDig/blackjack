@@ -6,10 +6,12 @@ let yourAceCount = 0;
 let hidden;
 let deck;
 let canHit = true;
+let userName = '';
 
-
-//userName = document.getElementById('username').value; -> trouble
-userName = "test"
+document.querySelector('.button-login').onclick = function() {
+	userName = document.querySelector('#username').value
+	load();
+}
 
 function addUserNameElement() {
     document.querySelector('.user-name').innerText = userName;
@@ -146,7 +148,7 @@ function reduseAce(playerSum, playerAceCount) {
     return playerSum;
 }
 
-window.onload = function () {
+function load() {
     addUserNameElement();
     buildDeck();
     shuffleDeck();
