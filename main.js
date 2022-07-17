@@ -20,12 +20,17 @@ document.addEventListener('keydown' , (e) => {
 })
 
 function clickEvent(){
-	userName = document.querySelector('#username').value
-	load();
-	document.querySelector('#modal').style.visibility = 'hidden';
-	document.querySelector('#modal').style.position = 'fixed';
-	document.querySelector('.container').style.visibility = 'visible';
-	document.querySelector('.container').style.position = 'static';
+	if(document.querySelector('#username').value == '' || document.querySelector('#username').value.length < 4) {
+		alert('Name not correct!')
+		document.querySelector('#username').value = ''
+	} else {
+		userName = document.querySelector('#username').value
+		load();
+		document.querySelector('#modal').style.visibility = 'hidden';
+		document.querySelector('#modal').style.position = 'fixed';
+		document.querySelector('.container').style.visibility = 'visible';
+		document.querySelector('.container').style.position = 'static';
+	}
 }
 
 document.querySelector('.button-login').onclick = function() {
