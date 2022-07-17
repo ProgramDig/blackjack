@@ -152,10 +152,14 @@ body {
     color: red;
 }
 #results {
+	visibility: hidden;
+	position: fixed;
+	width: 100%;
+	right: 0;
+	height: 90px;
     margin-top: 20px;
     color: white;
-    background: transparent;
-    background: conic-gradient(rgba(255,255,255,0.1)100% ,rgba(0 , 0 , 0 , 1)100% ,rgba(255 , 255 , 255 , 10)100%);
+    background: linear-gradient(0.25turn, rgba(44, 83, 100, 0.1), rgba(15, 32, 39, 0.7), rgba(32, 58, 67, 0.1));
 }
 /* The Modal (background) */
 

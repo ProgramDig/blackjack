@@ -32,7 +32,7 @@ function clickEvent(){
 	if(document.querySelector('#username').value == '' || document.querySelector('#username').value.length < 3) {
 		document.querySelector('#username').value = ''
 		document.querySelector('#username').classList.add('n-correct');
-        document.querySelector('.incorrect_input').innerText = 'incorrect input';
+        document.querySelector('.incorrect-input').innerText = 'incorrect input';
 
 	} else {
 		userName = document.querySelector('#username').value
@@ -103,6 +103,7 @@ function startGame() {
 }
 
 function resetGame() {
+	 document.querySelector('#results').style.visibility = 'hidden';
     dealerSum = 0;
     yourSum = 0;
     dealerAceCount = 0;
@@ -136,6 +137,7 @@ function hit() {
 }
 
 function stay() {
+	document.querySelector('#results').style.visibility = 'visible';
     dealerSum = reduseAce(dealerSum, dealerAceCount);
     yourSum = reduseAce(yourSum, yourAceCount);
     canHit = false;
