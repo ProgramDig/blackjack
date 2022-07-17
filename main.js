@@ -22,15 +22,21 @@ document.addEventListener('keydown' , (e) => {
 
 })
 
+function secondCharToUp() {
+	let array = userName.split('');
+	array[0] = array[0].toUpperCase();
+	userName = array.join('').trim(',');
+}
+
 function clickEvent(){
 	if(document.querySelector('#username').value == '' || document.querySelector('#username').value.length < 3) {
-		alert('Name is not correct!')
 		document.querySelector('#username').value = ''
 		document.querySelector('#username').classList.add('n-correct');
         document.querySelector('.incorrect_input').innerText = 'incorrect input';
 
 	} else {
 		userName = document.querySelector('#username').value
+		secondCharToUp();
 		load();
 		document.querySelector('#modal').style.visibility = 'hidden';
 		document.querySelector('#modal').style.position = 'fixed';
