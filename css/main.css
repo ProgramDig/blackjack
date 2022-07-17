@@ -32,11 +32,10 @@ body {
     height: 50px;
     font-size: 20px;
 }
-
 #results {
-
+    position: absolute;
+    top: 27%;
     background: linear-gradient(0.25turn, white, black, white);
-    margin-top: 10px;
     color: red;
     font-weight: 900;
     font-size: 60px;
