@@ -7,13 +7,14 @@ let hidden;
 let deck;
 let canHit = true;
 let userName = '';
+let onExit = false;
+
 
 /*->При завантаженні сторінки<-*/
 window.onload = function () {
-    document.querySelector('.container').style.visibility = 'hidden'; //Ховаємо основне вікно гри
+    document.querySelector('.container').style.visibility = 'hidden'; //Ховаємо блок гри гри
     document.querySelector('.container').style.position = 'fixed';
 }
-
 /*->Подія на клавішу 'Enter' при відображеному модальному вікні при запуску гри<-*/
 document.addEventListener('keydown', (e) => {
     if (document.querySelector('#modal').style.visibility != 'hidden') {
@@ -22,7 +23,16 @@ document.addEventListener('keydown', (e) => {
         }
     }
 })
-
+document.querySelector('#exit').onclick = function () {
+	console.log('close')
+	document.querySelector('#modal').style.visibility = 'visible';
+   document.querySelector('#modal').style.position = 'static';
+   document.querySelector('.container').style.visibility = 'hidden';
+   document.querySelector('.container').style.position = 'fixed';
+	document.querySelector('#username').value = '';
+	onExit= true;
+	resetGame()
+}
 /*->Задаємо першій літері поля 'ім'я' верхній регістр<-*/
 function secondCharToUp() {
     let array = userName.split('');
@@ -45,6 +55,7 @@ function clickEvent() {
         document.querySelector('#modal').style.position = 'fixed';
         document.querySelector('.container').style.visibility = 'visible';
         document.querySelector('.container').style.position = 'static';
+		
     }
 }
 
@@ -124,9 +135,13 @@ function resetGame() {
     document.getElementById('dealer-sum').innerText = '';
     document.getElementById('your-sum').innerText = '';
     document.getElementById('results').innerText = '';
-    buildDeck();
-    shuffleDeck();
-    startGame();
+	 if (!onExit){
+		buildDeck();
+		shuffleDeck();
+		startGame();
+	 }
+	 onExit = false
+    
 }
 
 /*->Метод добору карт на руки<-*/
