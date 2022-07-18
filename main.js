@@ -8,47 +8,52 @@ let deck;
 let canHit = true;
 let userName = '';
 
+/*->При завантаженні сторінки<-*/
 window.onload = function () {
-	document.querySelector('.container').style.visibility = 'hidden';
-	document.querySelector('.container').style.position = 'fixed';
+    document.querySelector('.container').style.visibility = 'hidden'; //Ховаємо основне вікно гри
+    document.querySelector('.container').style.position = 'fixed';
 }
 
-document.addEventListener('keydown' , (e) => {
-	if(document.querySelector('#modal').style.visibility != 'hidden'){
-		if(e.code == 'Enter'){
-			clickEvent()
-		}
-	}
-
+/*->Подія на клавішу 'Enter' при відображеному модальному вікні при запуску гри<-*/
+document.addEventListener('keydown', (e) => {
+    if (document.querySelector('#modal').style.visibility != 'hidden') {
+        if (e.code == 'Enter') {
+            clickEvent()
+        }
+    }
 })
 
+/*->Задаємо першій літері поля 'ім'я' верхній регістр<-*/
 function secondCharToUp() {
-	let array = userName.split('');
-	array[0] = array[0].toUpperCase();
-	userName = array.join('').trim(',');
+    let array = userName.split('');
+    array[0] = array[0].toUpperCase();
+    userName = array.join('').trim('');
 }
 
-function clickEvent(){
-	if(document.querySelector('#username').value == '' || document.querySelector('#username').value.length < 3) {
-		document.querySelector('#username').value = ''
-		document.querySelector('#username').classList.add('n-correct');
+/*->Подія контра валідує вхід та приховує модальне вікно й відображує основне вікно гри<-*/
+function clickEvent() {
+    if (document.querySelector('#username').value == '' || document.querySelector('#username').value.length < 3) {
+        document.querySelector('#username').value = ''
+        document.querySelector('#username').classList.add('n-correct');
         document.querySelector('.incorrect-input').innerText = 'incorrect input';
 
-	} else {
-		userName = document.querySelector('#username').value
-		secondCharToUp();
-		load();
-		document.querySelector('#modal').style.visibility = 'hidden';
-		document.querySelector('#modal').style.position = 'fixed';
-		document.querySelector('.container').style.visibility = 'visible';
-		document.querySelector('.container').style.position = 'static';
-	}
+    } else {
+        userName = document.querySelector('#username').value
+        secondCharToUp();
+        load();
+        document.querySelector('#modal').style.visibility = 'hidden';
+        document.querySelector('#modal').style.position = 'fixed';
+        document.querySelector('.container').style.visibility = 'visible';
+        document.querySelector('.container').style.position = 'static';
+    }
 }
 
-document.querySelector('.button-login').onclick = function() {
-	clickEvent()
+/*->Подія котра виконує функцію валідації та відображення<-*/
+document.querySelector('.button-login').onclick = function () {
+    clickEvent()
 }
 
+/*->Додавання елемента імені гравця в структуру сторінки<-*/
 function addUserNameElement() {
     document.querySelector('.user-name').innerText = userName;
     let span = document.createElement('span');
@@ -56,6 +61,7 @@ function addUserNameElement() {
     document.querySelector('.user-name').append(span);
 }
 
+/*->Метод побудови колоди<-*/
 function buildDeck() {
     let values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
     let types = ['C', 'D', 'H', 'S'];
@@ -67,6 +73,7 @@ function buildDeck() {
     }
 }
 
+/*->Метод мішання кололоди<-*/
 function shuffleDeck() {
     for (let i = 0; i < deck.length; i++) {
         let j = Math.floor(Math.random() * deck.length);
@@ -76,6 +83,7 @@ function shuffleDeck() {
     }
 }
 
+/*->Метод початок гри<-*/
 function startGame() {
     hidden = deck.pop();
     dealerSum += getValue(hidden);
@@ -102,8 +110,9 @@ function startGame() {
     document.getElementById('reset').addEventListener('click', resetGame);
 }
 
+/*->Метод завдяки якому , гра починається заново<-*/
 function resetGame() {
-	 document.querySelector('#results').style.visibility = 'hidden';
+    document.querySelector('#results').style.visibility = 'hidden';
     dealerSum = 0;
     yourSum = 0;
     dealerAceCount = 0;
@@ -121,6 +130,7 @@ function resetGame() {
     startGame();
 }
 
+/*->Метод добору карт на руки<-*/
 function hit() {
     if (!canHit) {
         return;
@@ -133,12 +143,13 @@ function hit() {
     document.getElementById('your-cards').append(cardImg);
     if (reduseAce(yourSum, yourAceCount) > 21) {
         canHit = false;
-		  stay();
+        stay();
     }
 }
 
+/*->Метод котрий підбиває сумму очок та висвітлює результат<-*/
 function stay() {
-	document.querySelector('#results').style.visibility = 'visible';
+    document.querySelector('#results').style.visibility = 'visible';
     dealerSum = reduseAce(dealerSum, dealerAceCount);
     yourSum = reduseAce(yourSum, yourAceCount);
     canHit = false;
@@ -160,6 +171,7 @@ function stay() {
     document.getElementById('results').innerText = message;
 }
 
+/*->Метод добору карт на руки<-*/
 function getValue(card) {
     let data = card.split('-');
     let value = data[0];
@@ -172,6 +184,7 @@ function getValue(card) {
     return parseInt(value);
 }
 
+/*->Метод перевірки туза як першої карти згідно правил гри у Black Jack<-*/
 function checkAce(card) {
     if (card[0] == 'A') {
         return 1;
@@ -179,6 +192,7 @@ function checkAce(card) {
     return 0;
 }
 
+/*->Метод для вирахування балів для туза<-*/
 function reduseAce(playerSum, playerAceCount) {
     while (playerSum > 21 && playerAceCount > 0) {
         playerSum -= 10;
@@ -187,6 +201,7 @@ function reduseAce(playerSum, playerAceCount) {
     return playerSum;
 }
 
+/*->Метод який запускає в собі перелічені методи<-*/
 function load() {
     addUserNameElement();
     buildDeck();
