@@ -133,6 +133,7 @@ function hit() {
     document.getElementById('your-cards').append(cardImg);
     if (reduseAce(yourSum, yourAceCount) > 21) {
         canHit = false;
+		  stay();
     }
 }
 
