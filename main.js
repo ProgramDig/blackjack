@@ -45,7 +45,7 @@ function clickEvent() {
     if (document.querySelector('#username').value == '' || document.querySelector('#username').value.length < 3) {
         document.querySelector('#username').value = ''
         document.querySelector('#username').classList.add('n-correct');
-        document.querySelector('.incorrect-input').innerText = 'невірний ввід';
+        document.querySelector('.incorrect-input').innerText = "Некоректне ім'я";
 
     } else {
         userName = document.querySelector('#username').value
