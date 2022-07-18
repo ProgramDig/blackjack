@@ -148,7 +148,7 @@ body {
     border-color: red;
 }
 
-.incorrect_input {
+.incorrect-input {
     margin-top: 10px;
     font-weight: bold;
     color: red;
