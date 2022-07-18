@@ -1,4 +1,3 @@
-const PATH_CARDS = '';
 let dealerSum = 0;
 let yourSum = 0;
 let dealerAceCount = 0;
@@ -88,7 +87,6 @@ function startGame() {
         dealerAceCount += checkAce(card);
         document.getElementById('dealer-cards').append(cardImg);
     }
-    console.log(dealerSum)
     for (let i = 0; i < 2; i++) {
         let cardImg = document.createElement('img');
         let card = deck.pop();
