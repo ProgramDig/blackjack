@@ -32,6 +32,7 @@ body {
     height: 50px;
     font-size: 20px;
 }
+
 #results {
     display: flex;
     position: absolute;
@@ -146,20 +147,23 @@ body {
 .n-correct {
     border-color: red;
 }
+
 .incorrect_input {
     margin-top: 10px;
     font-weight: bold;
     color: red;
 }
+
 #results {
-	visibility: hidden;
-	position: fixed;
-	top: 22vh;
-	width: 100%;
-	right: 0;
-	height: 90px;
-   color: white;
-   background: linear-gradient(0.25turn, rgba(44, 83, 100, 0.1), rgba(15, 32, 39, 0.7), rgba(32, 58, 67, 0.1));
+    visibility: hidden;
+    position: fixed;
+    top: 22vh;
+    width: 100%;
+    right: 0;
+    height: 90px;
+    color: white;
+    background: linear-gradient(0.25turn, rgba(44, 83, 100, 0.1), rgba(15, 32, 39, 0.7), rgba(32, 58, 67, 0.1));
 }
+
 /* The Modal (background) */
 

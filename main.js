@@ -155,15 +155,15 @@ function stay() {
     document.getElementById('hidden').src = CARD_PATH + hidden + '.png';
     let message = '';
     if (yourSum > 21) {
-        message = 'You lose!';
+        message = 'Ви програли!';
     } else if (dealerSum > 21) {
-        message = 'You win!';
+        message = 'Ви виграли!';
     } else if (yourSum == dealerSum) {
-        message = 'Tie!';
+        message = 'Нічия!';
     } else if (yourSum > dealerSum) {
-        message = 'You win!';
+        message = 'Ви виграли!';
     } else if (yourSum < dealerSum) {
-        message = 'You lose!';
+        message = 'Ви програли!';
     }
     document.getElementById('dealer-sum').innerText = ': ' + dealerSum;
     document.getElementById('your-sum').innerText = ': ' + yourSum;
